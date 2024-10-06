@@ -2,7 +2,7 @@
   "name": "meu-projeto",
   "version": "1.0.0",
   "description": "Uma aplicação de exemplo em Node.js",
-  "main": "server.js",
+  "main": "meu-backend/server.js",
   "scripts": {
     "start": "node meu-backend/server.js",
     "dev": "nodemon meu-backend/server.js"
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/usuario/meu-projeto.git"
+    "url": "git+https://github.com/luide37/projetoPonto.git"
   },
   "keywords": [
     "node",
