@@ -3,21 +3,17 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const cors = require('cors');
-require('dotenv').config(); // Carregar as variáveis de ambiente do arquivo .env
+require('dotenv').config(); // Certifique-se de que isso está no início do arquivo
 
+const mongoose = require('mongoose');
+const express = require('express');
 const app = express();
-const PORT = process.env.PORT || 5000;
 
-// Middleware
-app.use(cors());
-app.use(bodyParser.json());
-
-// Conectar ao MongoDB Atlas
-const mongoURI = process.env.MONGODB_URI; // Aqui usamos a variável de ambiente
-
-mongoose.connect(mongoURI)
+// Conexão com o MongoDB
+const mongoURI = process.env.MONGO_URI;
+mongoose.connect(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB Atlas conectado'))
-  .catch(err => console.error('Erro de conexão com o MongoDB:', err));
+  .catch(err => console.log('Erro de conexão com o MongoDB:', err));
 
 // Definir um esquema de usuário
 const userSchema = new mongoose.Schema({

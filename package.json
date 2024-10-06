@@ -4,13 +4,14 @@
   "description": "Uma aplicação de exemplo em Node.js",
   "main": "server.js",
   "scripts": {
-  "start": "node meu-backend/server.js",
-  "dev": "nodemon meu-backend/server.js"
-},
+    "start": "node meu-backend/server.js",
+    "dev": "nodemon meu-backend/server.js"
+  },
   "dependencies": {
+    "dotenv": "^16.0.3",
     "express": "^4.18.2",
-    "mongoose": "^7.5.0",
-    "dotenv": "^16.0.3"
+    "meu-projeto": "file:",
+    "mongoose": "^7.5.0"
   },
   "engines": {
     "node": ">=16.x"
@@ -27,5 +28,3 @@
   "author": "Seu Nome",
   "license": "ISC"
 }
-
-
